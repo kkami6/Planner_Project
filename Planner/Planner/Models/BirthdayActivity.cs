@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Models
 {
-    public class BirthdayActivity : Activity
+    public class BirthdayActivity : UserActivity
     {
         public string BirthdayPerson { get; set; }
 

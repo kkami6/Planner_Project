@@ -1,5 +1,4 @@
 ﻿using BuisnessLayer.Models;
-using BusinessLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -22,9 +21,6 @@ namespace DataLayer
 
                 builder.Property(t => t.IsCompleted)
                        .IsRequired();
-
-                builder.HasDiscriminator<string>("ActivityType")
-                       .HasValue<TaskActivity>("Task");
             }
         }
     }

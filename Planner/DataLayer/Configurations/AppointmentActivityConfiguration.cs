@@ -20,8 +20,6 @@ namespace DataLayer.Configurations
             builder.Property(t => t.EndTime)
                    .IsRequired();
 
-            builder.HasDiscriminator<string>("ActivityType")
-                   .HasValue<TaskActivity>("Appointment");
         }
     }
 }

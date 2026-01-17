@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Models
 {
-    public class AppointmentActivity : Activity
+    public class AppointmentActivity : UserActivity
     {
         public TimeOnly StartTime { get; set; }
         public TimeOnly EndTime { get; set; }

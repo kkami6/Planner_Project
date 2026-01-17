@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Username { get; set; }
-        public string PasswordHash { get; set; } //We should hash the password before saving it in order to improve security
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public List<Activity> Activities { get; set; }
         public List<DailyRemider> DailyRemiders { get; set; }
         public User() { }
-        public User(int id, string name, string username, string passwordHash)
+
+        public User(string userName, string email, string firstName, string lastName, List<Activity> activities = null,
+        List<DailyRemider> dailyRemiders = null)
         {
-            Id = id;
-            Name = name;
-            Username = username;
-            PasswordHash = passwordHash;
-            Activities = new List<Activity>();
-            DailyRemiders = new List<DailyRemider>();
+            UserName = userName;
+            Email = email;
+            FirstName = firstName;
+            LastName = lastName;
+            Activities = activities ?? new List<Activity>();
+            DailyRemiders = dailyRemiders ?? new List<DailyRemider>();
         }
     }
 }

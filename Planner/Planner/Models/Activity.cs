@@ -4,8 +4,6 @@
     {
         public int ActivityId { get; set; }
         public string Name { get; set; } = null!;
-        public int UserId { get; set; }
-        public User User { get; set; }
         public DateOnly Date { get; set; }
         public string? Description { get; set; }
         public string Color { get; set; } = null!;
@@ -25,14 +23,12 @@
 
         protected Activity(
             string name,
-            int userId,
             DateOnly date,
             string description,
             string color,
             RecurrenceType recurrence)
         {
             Name = name;
-            UserId = userId;
             Description = description;
             Color = color;
             Recurrence = recurrence;

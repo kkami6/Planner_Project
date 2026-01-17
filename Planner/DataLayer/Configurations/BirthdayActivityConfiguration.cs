@@ -17,8 +17,6 @@ namespace DataLayer.Configurations
             builder.Property(t => t.BirthdayPerson)
                    .IsRequired();
 
-            builder.HasDiscriminator<string>("ActivityType")
-                   .HasValue<TaskActivity>("Birthday");
         }
     }
 }

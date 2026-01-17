@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Models
 {
-    public class TaskActivity : Activity
+    public class TaskActivity : UserActivity
     {
         public DateOnly DueDate { get; set; }
         public bool IsCompleted { get; set; }
