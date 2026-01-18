@@ -26,7 +26,7 @@ namespace BuisnessLayer.Models
 
         public override string GetActivityType()
         {
-            return "USerActivity";
+            return "UserActivity";
         }
 
     }
