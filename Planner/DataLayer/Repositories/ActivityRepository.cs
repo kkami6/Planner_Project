@@ -45,7 +45,6 @@ namespace DataLayer.Repositories
             var updated = model.ToEntity();
 
             entity.Name = updated.Name;
-            entity.UserId = updated.UserId;
             entity.Date = updated.Date;
             entity.Description = updated.Description;
             entity.Color = updated.Color;
